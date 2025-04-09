@@ -1,0 +1,168 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== CSS 变量 ========== */
+:root {
+  --color-primary: #2563eb;
+  --color-primary-light: #3b82f6;
+  --color-accent: #22c55e;
+  --color-background: #f9fafb;
+  --color-card: #ffffff;
+  --color-text-primary: #1f2937;
+  --color-muted: #9ca3af;
+}
+
+/* ========== 全局基础 ========== */
+body {
+  @apply bg-background text-textPrimary font-sans antialiased;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+/* 增加基础样式 */
+.bg-gradient-primary {
+  background-image: linear-gradient(to right, var(--color-primary), #2468f2);
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+.bg-white\/80 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bg-gray-50\/80 {
+  background-color: rgba(249, 250, 251, 0.8);
+}
+
+h1, h2, h3, h4 {
+  @apply font-bold text-gray-900;
+}
+
+/* ========== 通用按钮 ========== */
+.btn {
+  @apply bg-gradient-to-r from-primary to-blue-600 text-white px-5 py-3 rounded-xl 
+  hover:opacity-90 transition-all duration-200 font-medium shadow-sm;
+}
+
+.btn-light {
+  @apply bg-white text-gray-700 border border-gray-200 px-5 py-3 rounded-xl 
+  hover:bg-gray-50 hover:shadow-md transition-all duration-200;
+}
+
+.btn-outline {
+  @apply border border-primary text-primary px-5 py-3 rounded-xl 
+  hover:bg-blue-50 transition-all duration-200 font-medium;
+}
+
+.btn-danger {
+  @apply bg-gradient-to-r from-red-500 to-red-600 text-white px-5 py-3 rounded-xl 
+  hover:opacity-90 transition-all duration-200 font-medium shadow-sm;
+}
+
+/* ========== 卡片组件 ========== */
+.card {
+  @apply bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-100 shadow-sm 
+  transition-all duration-300 hover:shadow-md;
+}
+
+.card-title {
+  @apply text-xl font-semibold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent mb-3;
+}
+
+/* ========== 标签（任务状态） ========== */
+.tag-done {
+  @apply bg-green-100/80 backdrop-blur-sm text-green-700 px-3 py-1 text-xs rounded-full font-medium;
+}
+
+.tag-pending {
+  @apply bg-yellow-100/80 backdrop-blur-sm text-yellow-700 px-3 py-1 text-xs rounded-full font-medium;
+}
+
+.tag-muted {
+  @apply bg-gray-100/80 backdrop-blur-sm text-gray-500 px-3 py-1 text-xs rounded-full font-medium;
+}
+
+/* ========== 表格风格 ========== */
+table {
+  @apply w-full border-collapse text-sm rounded-xl overflow-hidden;
+}
+
+th, td {
+  @apply px-4 py-3 border-b border-gray-100 text-left;
+}
+
+thead {
+  @apply bg-gray-50/80 backdrop-blur-sm;
+}
+
+/* ========== 输入框 ========== */
+.input {
+  @apply w-full border border-gray-200 px-4 py-3 rounded-xl focus:outline-none
+  focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200;
+}
+
+/* ========== 区块间距 ========== */
+.section {
+  @apply mb-10;
+}
+
+/* ========== 辅助文本 ========== */
+.text-muted {
+  @apply text-gray-500;
+}
+
+/* ========== 新增：渐变文本 ========== */
+.text-gradient {
+  @apply bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent;
+}
+
+/* ========== 新增：玻璃态卡片 ========== */
+.glass-card {
+  @apply bg-white/80 backdrop-blur-sm border border-gray-100 rounded-2xl shadow-sm;
+}
+
+/* ========== 新增：数据展示 ========== */
+.metric-card {
+  @apply p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-100 flex flex-col;
+}
+
+.metric-value {
+  @apply text-2xl font-bold text-primary;
+}
+
+.metric-label {
+  @apply text-sm text-gray-500;
+}
+
+/* ========== 新增：动画和过渡 ========== */
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+/* ========== 新增：响应式布局助手 ========== */
+.responsive-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+/* ========== 新增：页面容器 ========== */
+.page-container {
+  @apply max-w-4xl mx-auto w-full flex flex-col items-center space-y-8 py-10;
+}
+
+/* ========== 新增：导航 ========== */
+.nav-link {
+  @apply px-4 py-2 rounded-xl text-gray-700 hover:bg-gray-100 transition-all duration-200;
+}
+
+.nav-link-active {
+  @apply px-4 py-2 rounded-xl bg-primary/10 text-primary font-medium;
+}

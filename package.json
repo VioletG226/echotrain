@@ -1,21 +1,12 @@
 {
   "name": "echotrain",
   "version": "1.0.0",
-  "private": true,
+  "description": "EchoTrain 是一个基于 React 和 Azure Functions 构建的影子跟读训练平台，包含三阶段任务、语音评分、音频上传、打卡记录和管理员后台。",
+  "main": "index.js",
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.0"
-  },
-  "devDependencies": {
-    "vite": "^4.0.0",
-    "tailwindcss": "^3.0.0",
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.0"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

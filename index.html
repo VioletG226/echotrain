@@ -3,27 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EchoTrain - Repetition-based pronunciation training platform" />
     <title>EchoTrain</title>
-    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+
+    <!-- Google Font: Inter (搭配 Tailwind 使用) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- 确保样式正确应用 -->
     <style>
-      body {
-        font-family: sans-serif;
-        margin: 0;
-        padding: 1em;
-        text-align: center;
+      /* 基础渐变和背景样式 */
+      .bg-gradient-to-r {
+        background-image: linear-gradient(to right, #2563eb, #2468f2);
       }
-      .logo {
-        max-width: 200px;
-        margin-bottom: 1rem;
+      .bg-gradient-to-b {
+        background-image: linear-gradient(to bottom, #f9fafb, #f3f4f6);
+      }
+      .backdrop-blur-sm {
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+      }
+      .bg-clip-text {
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      .bg-white\/80 {
+        background-color: rgba(255, 255, 255, 0.8);
       }
     </style>
   </head>
-  <body>
-    <!-- ✅ 加载 logo 图像 -->
-    <img src="/logo.png" alt="EchoTrain Logo" class="logo" />
-
+  <body class="bg-background text-textPrimary font-sans antialiased">
     <!-- React App 挂载点 -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
